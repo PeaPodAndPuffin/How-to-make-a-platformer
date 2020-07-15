@@ -42,12 +42,12 @@ public class Player : MonoBehaviour
     public GameObject blood;
     public GameObject deathEffect;
     public GameObject pickupEffect;
+    public GameObject swordSwingEffect;
+    public GameObject dropEffect;
 
     AudioSource source;
 
     public AudioClip jumpSound;
-    public AudioClip hurtSound;
-    public AudioClip pickupSound;
 
     private void Start()
     {
@@ -143,8 +143,6 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        source.clip = hurtSound;
-        source.Play();
         FindObjectOfType<CameraShake>().Shake();
         health -= damage;
         print(health);
@@ -158,6 +156,8 @@ public class Player : MonoBehaviour
     }
 
     public void Attack() {
+
+        Instantiate(swordSwingEffect, attackPoint.position, Quaternion.identity);
         FindObjectOfType<CameraShake>().Shake();
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
         foreach (Collider2D col in enemiesToDamage)
@@ -174,13 +174,16 @@ public class Player : MonoBehaviour
     }
 
     public void Equip(Weapon weapon) {
-        source.clip = pickupSound;
-        source.Play();
         damage = weapon.damage;
         attackRange = weapon.attackRange;
         weaponRenderer.sprite = weapon.GFX;
         Instantiate(pickupEffect, transform.position, Quaternion.identity);
         Destroy(weapon.gameObject);
+    }
+
+    public void Land() {
+        Vector2 pos = new Vector2(groundCheck.position.x, groundCheck.position.y + 1);
+        Instantiate(dropEffect, pos, Quaternion.identity);
     }
 
 }

@@ -12530,7 +12530,7 @@ GameObject:
   - component: {fileID: 1272832276}
   - component: {fileID: 1272832279}
   m_Layer: 0
-  m_Name: weapons2_0
+  m_Name: Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13349,9 +13349,11 @@ MonoBehaviour:
     type: 3}
   pickupEffect: {fileID: 6965826820710018707, guid: ed02ec074e1ac524cbf8a5c9ac0f235e,
     type: 3}
+  swordSwingEffect: {fileID: 695184082472325004, guid: cc37b9d0870a2dc45bd5f6c63b3a0542,
+    type: 3}
+  dropEffect: {fileID: 8835550746523984416, guid: 7b61a5f366ac73d43a65a8b1a13bfa01,
+    type: 3}
   jumpSound: {fileID: 8300000, guid: 493c331bc3d1a468788526a263f9fd30, type: 3}
-  hurtSound: {fileID: 8300000, guid: c2e01504ac5c64042a9c8424c01a0c76, type: 3}
-  pickupSound: {fileID: 8300000, guid: 8b5f2a60bba7a42cc8ea68d841bba144, type: 3}
 --- !u!95 &1369753378
 Animator:
   serializedVersion: 3
@@ -13578,7 +13580,7 @@ GameObject:
   - component: {fileID: 1518156392}
   - component: {fileID: 1518156395}
   m_Layer: 0
-  m_Name: weapons2_3
+  m_Name: Green Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15984,7 +15986,7 @@ GameObject:
   - component: {fileID: 2011686615}
   - component: {fileID: 2011686618}
   m_Layer: 0
-  m_Name: weapons2_1
+  m_Name: Twisty Fire Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16335,7 +16337,7 @@ GameObject:
   - component: {fileID: 2034872945}
   - component: {fileID: 2034872948}
   m_Layer: 0
-  m_Name: weapons2_2
+  m_Name: Spiked Mace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
